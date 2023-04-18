@@ -1,0 +1,23 @@
+doctype strict
+html
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title TEAM-1.CO - Contraseña olvidado
+        style
+            include ./../style.css
+    body
+        p #{firstName} #{lastName},
+        p Hemos recibido una solicitud de cambio de contraseña para su cuenta: #{email}
+            br 
+            | Si realizó esta solicitud, haga clic en lo siguiente 
+            a(href=link) ENLACE
+        p.note Este enlace funcionará durante 24 horas o hasta que restablezca su contraseña.
+        p Si no solicitó cambiar su contraseña, ignore este correo electrónico. Es posible que otro usuario haya ingresado su nombre de usuario por error. No se realizarán cambios en su cuenta.
+        p ¿Tiene preguntas? Por favor, revise el 
+            a(href="#") página de preguntas frecuentes 
+            | . Si no puede encontrar la respuesta allí, contáctenos en 
+            a(href="mailto:support@team-1.co") support@team-1.co
+        hr
+        p TEAM-1.CO
+        img(src="cid:logo")

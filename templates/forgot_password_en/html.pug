@@ -1,0 +1,24 @@
+doctype strict
+html
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title TEAM-1.CO - Forgot Password
+        style
+            include ./../style.css
+    body
+        p Dear #{firstName} #{lastName},
+        p We have received a password change request for your account: #{email}
+            br 
+            | If you made this request, then please click on the following 
+            a(href=link) LINK
+        p.note This link will work for 24 hours or until you reset your password.
+        p If you did not ask to change your password, then please ignore this email. Another user may have entered your username by mistake. No changes will be made to your account.
+        p Have questions? Please, review the 
+            a(href="#") FAQ page
+            | . If you can't find the answer there, contact us at 
+            a(href="mailto:support@team-1.co") support@team-1.co
+        hr
+        p Yours, 
+        p TEAM-1.CO
+        img(src="cid:logo")

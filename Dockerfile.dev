@@ -1,0 +1,18 @@
+#Image
+FROM node:latest
+
+#Application directory
+WORKDIR /usr/src/app
+
+# Install dependencies
+COPY ./package.json package-lock.json ./
+RUN npm install --verbose
+
+# Bundle app source
+COPY . ./
+
+#Binding port
+EXPOSE 9000
+EXPOSE 5858
+
+CMD ["npm", "run", "dev:docker"]

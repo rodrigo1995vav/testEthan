@@ -1,0 +1,18 @@
+FROM node:latest
+
+COPY ./keys/team-1 .
+RUN chmod 600 team-1 && \
+    eval $(ssh-agent) && \
+    ssh-add team-1 && \
+    ssh-keyscan -H github.com >> /etc/ssh/ssh_known_hosts && \
+    git clone git@github.com:Mousseyed/Team-1 usr/src/app && \
+    rm team-1
+WORKDIR /usr/src/app/backend
+RUN npm install --verbose && \
+    npm audit fix
+
+#Binding port
+EXPOSE 9000
+EXPOSE 5858
+
+CMD ["npm", "run", "start"]

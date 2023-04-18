@@ -1,0 +1,34 @@
+a:link {
+    color: midnightblue;
+    text-decoration: underline;
+    font-style: bold;
+}
+
+a:hover {
+    color: darkorange;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+h2 {
+    color: darkorange;
+    text-align: center;
+}
+
+h3 {
+    color: darkorange;
+}
+
+img {
+    width: 256px
+}
+
+.note {
+    color: darkorange;
+    font-style: italic;
+}
+
+body {
+    background-color: whitesmoke;
+    color: midnightblue;
+}

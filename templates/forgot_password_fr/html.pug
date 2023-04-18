@@ -1,0 +1,24 @@
+doctype strict
+html
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title TEAM-1.CO - Réinitialisation du mot de passe
+        style
+            include ./../style.css
+    body
+        p Chèr(e) #{firstName} #{lastName},
+        p Nous avons réçu une requête de réintialisation du mot de passe pour le compte : #{email}
+            br 
+            | Si vous êtes à l'origine de cette requête, veuillez cliquer sur le lien qui suit 
+            a(href=link) LIEN
+        p.note Ce lien fonctionnera pendant 24h ou jusqu'à que vous réinitialiser votre mot de passe.
+        p Si vous n'avez pas demandé à modifier votre mot de passe, veuillez ignorer ce courriel. Un autre utilisateur a peut-être entré votre nom d'utilisateur par erreur. Aucune modification ne sera apportée à votre compte.
+        p Avez-vous des questions ? Veuillez consulter la 
+            a(href="#") page FAQ
+            | . Si vous ne trouvez pas de réponse, contactez-nous à 
+            a(href="mailto:support@team-1.co") support@team-1.co
+        hr
+        p Cordialement, 
+        p TEAM-1.CO
+        img(src="cid:logo")
